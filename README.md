@@ -1,6 +1,6 @@
 # Prueba Tecnica Api
 
-This is a .Net Core v3.0 Web Api. This API implements docker.
+This is a .Net Core v3.1 Web Api. This API implements docker.
 
 <br>
 
