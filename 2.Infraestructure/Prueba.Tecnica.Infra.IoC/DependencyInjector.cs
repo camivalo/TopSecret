@@ -20,9 +20,7 @@ namespace Prueba.Tecnica.Infra.IoC
 
             services.AddSingleton<ICacheRepository, CacheRepository>();
             services.AddSingleton<ITopSecretService, TopSecretService>();
-            services.AddSingleton<IEntitytwoService, EntitytwoService>();
             services.AddSingleton<ITopSecretApplication, TopSecretApplication>();
-            services.AddSingleton<IEntitytwoApplication, EntitytwoApplication>();
 
             return services;
         }

@@ -66,16 +66,16 @@ namespace Prueba.Tecnica.WebApi.Controllers
             return satellite;
         }
 
-        [HttpGet]
-        [Route("topsecret_split/getTopSecretDataSplit")]
-        public async Task<object> GetTopSecretDataSplit([FromRoute] string satellitename, [FromBody] Satellite satellite)
-        {
+        //[HttpGet]
+        //[Route("topsecret_split/getTopSecretDataSplit")]
+        //public async Task<object> GetTopSecretDataSplit()
+        //{
 
 
 
 
-            return satellite;
-        }
+        //    return satellite;
+        //}
 
         private async Task<GenericResponse> GetLocation(Satellites satellites)
         {
