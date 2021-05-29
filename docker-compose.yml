@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+    api:
+        image: "prueba-tecnica-api:latest"
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development        
+            - RedisConnection=redis_image
+        build:
+            context: .
+            dockerfile: 4.WebApi/Prueba.Tecnica.WebApi/Dockerfile
+        ports:
+            - "6001:80"
+        depends_on:
+            - "redis_image"
+
+    redis_image:
+        image: redis
+        container_name: prueba-tecnica-cache
+        ports:
+            - "6379:6379"
+

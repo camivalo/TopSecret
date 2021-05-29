@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\1.Domain\Prueba.Tecnica.Domain.Entities\Prueba.Tecnica.Domain.Entities.csproj" />
+    <ProjectReference Include="..\Prueba.Tecnica.Application.Contracts\Prueba.Tecnica.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
