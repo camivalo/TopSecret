@@ -49,11 +49,6 @@ This project consists it's build in ONION architecture with the following layers
 
 #### **5.** Open browser in `http://localhost:{DefaultPort}/swagger`. **DefaultPort: 6001**
 
-#### **6.** Populate the Redis cache data executing method create `/pruebaT/entitytwo/create`
-
-#### **7.** Access the roulette data using Http Get to access `/pruebaT/entitytwo/all`
-
-#### **8.** Finish by cleaning up... `docker-compose down`
 
 <br>
 
