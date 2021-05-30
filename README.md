@@ -54,6 +54,25 @@ This project consists it's build in ONION architecture with the following layers
 # Test Data
 ## Body
 ### Positive Case
+{
+    "satellites": [
+        {
+        "name": "kenobi",
+        "distance": 500,
+        "message": ["este", "", "", "mensaje", ""]
+        },
+        {
+        "name": "skywalker",
+        "distance": 500,
+        "message": ["", "es", "", "", "secreto"]
+        },
+        {
+        "name": "sato",
+        "distance": 1300,
+        "message": ["este", "", "un", "", ""]
+        }
+    ]
+}
 
 <br>
 
