@@ -86,17 +86,17 @@ This project consists it's build in ONION architecture with the following layers
     "satellites": [<br>
         {<br>
         "name": "kenobi",<br>
-        "distance": 500,<br>
+        "distance": 84,<br>
         "message": ["este", "", "", "mensaje", ""]<br>
         },<br>
         {<br>
         "name": "skywalker",<br>
-        "distance": 500,<br>
+        "distance": 114,<br>
         "message": ["", "es", "", "", "secreto"]<br>
         },<br>
         {<br>
         "name": "sato",<br>
-        "distance": 1300,<br>
+        "distance": 120,<br>
         "message": ["este", "", "un", "", ""]<br>
         }<br>
     ]<br>
