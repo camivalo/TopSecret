@@ -49,8 +49,106 @@ This project consists it's build in ONION architecture with the following layers
 
 #### **5.** Open browser in `http://localhost:{DefaultPort}/swagger`. **DefaultPort: 6001**
 
+<br>
+
+# Test Data
+## Positive Case
+### Body
+{
+    "satellites": [<br>
+        {<br>
+        "name": "kenobi",<br>
+        "distance": 500,<br>
+        "message": ["este", "", "", "mensaje", ""]<br>
+        },<br>
+        {<br>
+        "name": "skywalker",<br>
+        "distance": 500,<br>
+        "message": ["", "es", "", "", "secreto"]<br>
+        },<br>
+        {<br>
+        "name": "sato",<br>
+        "distance": 1300,<br>
+        "message": ["este", "", "un", "", ""]<br>
+        }<br>
+    ]<br>
+}<br>
+### coordinates into appSettings
+- Kenobi: [500, 400]
+- Skywalker: [400, -300]
+- Sato: [-400, 1300]
 
 <br>
+
+## Negative Case
+### Body
+{
+    "satellites": [<br>
+        {<br>
+        "name": "kenobi",<br>
+        "distance": 84,<br>
+        "message": ["este", "", "", "mensaje", ""]<br>
+        },<br>
+        {<br>
+        "name": "skywalker",<br>
+        "distance": 114,<br>
+        "message": ["", "es", "", "", "secreto"]<br>
+        },<br>
+        {<br>
+        "name": "sato",<br>
+        "distance": 120,<br>
+        "message": ["este", "", "un", "", ""]<br>
+        }<br>
+    ]<br>
+}<br>
+### coordinates into appSettings
+- Kenobi: [-19.6685, -69.1942]
+- Skywalker: [-20.2705, -70.1311]
+- Sato: [-20.5656, -70.1807]
+
+
+## Body Not message
+{
+    "satellites": [<br>
+        {<br>
+        "name": "kenobi",<br>
+        "distance": 500,<br>
+        "message": ["", "", "", "", ""]<br>
+        },<br>
+        {<br>
+        "name": "skywalker",<br>
+        "distance": 500,<br>
+        "message": ["", "", "", "", ""]<br>
+        },<br>
+        {<br>
+        "name": "sato",<br>
+        "distance": 1300,<br>
+        "message": ["", "", "", "", ""]<br>
+        }<br>
+    ]<br>
+}<br>
+
+## Body Message Incomplete
+{
+    "satellites": [<br>
+        {<br>
+        "name": "kenobi",<br>
+        "distance": 500,<br>
+        "message": ["este", "", "", "", ""]<br>
+        },<br>
+        {<br>
+        "name": "skywalker",<br>
+        "distance": 500,<br>
+        "message": ["", "es", "", "", ""]<br>
+        },<br>
+        {<br>
+        "name": "sato",<br>
+        "distance": 1300,<br>
+        "message": ["este", "", "un", "", ""]<br>
+        }<br>
+    ]<br>
+}<br>
+
 
 # Author
 
