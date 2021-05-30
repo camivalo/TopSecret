@@ -1,6 +1,5 @@
 ﻿using Prueba.Tecnica.Domain.Entities;
 using Prueba.Tecnica.Domain.Entities.Config;
-using Prueba.Tecnica.Domain.Entities.Enums;
 using Prueba.Tecnica.Domain.Interfaces.Repositories;
 using Prueba.Tecnica.Domain.Interfaces.Services;
 using Prueba.Tecnica.Domain.Services.Utilities;

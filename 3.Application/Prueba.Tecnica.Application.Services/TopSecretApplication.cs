@@ -1,5 +1,4 @@
-﻿using Prueba.Tecnica.Application.Contracts.DTO;
-using Prueba.Tecnica.Application.Interfaces;
+﻿using Prueba.Tecnica.Application.Interfaces;
 using Prueba.Tecnica.Domain.Entities;
 using Prueba.Tecnica.Domain.Interfaces.Services;
 using System.Threading.Tasks;

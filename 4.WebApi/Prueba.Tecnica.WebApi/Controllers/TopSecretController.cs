@@ -1,7 +1,5 @@
-﻿using Prueba.Tecnica.Application.Contracts.DTO;
-using Prueba.Tecnica.Application.Interfaces;
+﻿using Prueba.Tecnica.Application.Interfaces;
 using Prueba.Tecnica.Domain.Entities.Config;
-using Prueba.Tecnica.Domain.Entities.Enums;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using System.ComponentModel.DataAnnotations;
