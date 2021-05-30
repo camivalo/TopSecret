@@ -28,7 +28,7 @@ namespace Prueba.Tecnica.WebApi.Controllers
 
 
         [HttpPost]
-        [Route("topsecret/topSecretData")]
+        [Route("topsecret")]
         public async Task<object> TopSecretData([FromBody] Satellites satellites)
         {
             var location = GetLocation(satellites);
