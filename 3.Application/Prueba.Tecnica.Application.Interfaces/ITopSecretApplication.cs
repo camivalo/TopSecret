@@ -7,6 +7,6 @@ namespace Prueba.Tecnica.Application.Interfaces
     public interface ITopSecretApplication
     {
         Task<GenericResponse> GetLocation(Satellites satellites);
-        string GetMessage(Satellites satellites);
+        Task<GenericResponse> GetMessage(Satellites satellites);
     }
 }

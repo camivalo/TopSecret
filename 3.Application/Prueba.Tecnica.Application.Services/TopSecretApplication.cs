@@ -20,9 +20,9 @@ namespace Prueba.Tecnica.Application.Services
             return await topSecretService.GetLocation(satellites);
         }
 
-        public  string GetMessage(Satellites satellites)
+        public async Task<GenericResponse> GetMessage(Satellites satellites)
         {
-            return topSecretService.GetMessage(satellites);
+            return await topSecretService.GetMessage(satellites);
         }
     }
 }

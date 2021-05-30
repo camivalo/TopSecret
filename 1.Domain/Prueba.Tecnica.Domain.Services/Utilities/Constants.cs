@@ -13,5 +13,7 @@
         public const string INTERNAL_SERVER_ERROR = "INTERNAL_SERVER_ERROR";
         public const string INTERNAL_SERVER_ERROR_DESC = "Something went wrong. Please try again.";
         public const string SHIP_POSITION_NOT_DETERMINED = "404 Ship Position Not Determined";
+        public const string SHIP_POSITION_NOT_DETERMINED_DESC = "It was not possible to find the ship With the data provided";
+        public const string MESSAGE_INCOMPLETE = "Message Incomplete";
     }
 }

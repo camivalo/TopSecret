@@ -8,7 +8,7 @@ namespace Prueba.Tecnica.Domain.Interfaces.Services
     {
         Task<GenericResponse> GetLocation(Satellites satellites);
 
-        string GetMessage(Satellites satellites);
+        Task<GenericResponse> GetMessage(Satellites satellites);
 
     }
 }

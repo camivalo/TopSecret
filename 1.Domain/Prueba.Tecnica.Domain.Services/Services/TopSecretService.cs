@@ -74,15 +74,15 @@ namespace Prueba.Tecnica.Domain.Services.Services
             }
 
             // Triangular scale validation
-            distanceKenobiSkywalker = Math.Sqrt(Math.Pow((latitudeSkywalker - latitudeKenobi), 2) + Math.Pow((lengthSkywalker - lengthKenobi), 2));
+            //distanceKenobiSkywalker = Math.Sqrt(Math.Pow((latitudeSkywalker - latitudeKenobi), 2) + Math.Pow((lengthSkywalker - lengthKenobi), 2));
 
-            if (distanceKenobiSkywalker >= (distanceKenobi + distanceSkywalker) || distanceKenobiSkywalker <= Math.Abs(distanceKenobi - distanceSkywalker))
-            {
-                ErrorResponse error = null;
-                error = new ErrorResponse("404", Constants.SHIP_POSITION_NOT_DETERMINED);
-                return Helper.ManageResponse(error, false);
+            //if (distanceKenobiSkywalker >= (distanceKenobi + distanceSkywalker) || distanceKenobiSkywalker <= Math.Abs(distanceKenobi - distanceSkywalker))
+            //{
+            //    ErrorResponse error = null;
+            //    error = new ErrorResponse("404", Constants.SHIP_POSITION_NOT_DETERMINED);
+            //    return Helper.ManageResponse(error, false);
 
-            }
+            //}
 
             // Trilateration process
 
@@ -121,12 +121,12 @@ namespace Prueba.Tecnica.Domain.Services.Services
                 latitudeCargoShip = x2;
                 lengthCargoShip = y2;
             }
-            if (Double.IsNaN(latitudeCargoShip) || Double.IsNaN(latitudeCargoShip))
-            {
-                ErrorResponse error = null;
-                error = new ErrorResponse("404", Constants.SHIP_POSITION_NOT_DETERMINED);
-                return Helper.ManageResponse(error, false);
-            }
+            //if (Double.IsNaN(latitudeCargoShip) || Double.IsNaN(latitudeCargoShip))
+            //{
+            //    ErrorResponse error = null;
+            //    error = new ErrorResponse("404", Constants.SHIP_POSITION_NOT_DETERMINED);
+            //    return Helper.ManageResponse(error, false);
+            //}
 
             var shipPosition = new ShipPosition()
             {
@@ -140,7 +140,7 @@ namespace Prueba.Tecnica.Domain.Services.Services
 
 
 
-        public string GetMessage(Satellites satellites)
+        public async Task<GenericResponse> GetMessage(Satellites satellites)
         {
             string spaceShipMessage = "";
             var message = new List<string>();
@@ -164,15 +164,17 @@ namespace Prueba.Tecnica.Domain.Services.Services
 
             foreach (string m in message)
             {
+                if (string.IsNullOrWhiteSpace(m))
+                    return Helper.ManageResponse(Constants.MESSAGE_INCOMPLETE, false);
                 spaceShipMessage = spaceShipMessage + m + " ";
             }
 
-            //var shipMessage = new ShipMessage()
-            //{
-            //    message = spaceShipMessage
-            //};
+            var shipMessage = new ShipMessage()
+            {
+                message = spaceShipMessage
+            };
 
-            return spaceShipMessage;
+            return Helper.ManageResponse(shipMessage, true);
         }
 
         public async Task<Satellite> SatelliteData(Satellite satellite)

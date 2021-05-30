@@ -28,42 +28,55 @@ namespace Prueba.Tecnica.WebApi.Controllers
 
 
         [HttpPost]
-        [Route("topsecret/getTopSecretData")]
-        public async Task<object> GetTopSecretData([FromBody] Satellites satellites)
+        [Route("topsecret/topSecretData")]
+        public async Task<object> TopSecretData([FromBody] Satellites satellites)
         {
-        //    if (!ValidateRequest(satellites))
-        //        return BadRequest();
             var location = GetLocation(satellites);
             var message = GetMessage(satellites);
             object response;
-
+            
             if (!location.Result.Success)
                 response = location.Result;
+            else if(!message.Result.Success)
+                response = message.Result;
             else
             {
                 var shipdata = new ShipData()
                 {
                     shipPosition = (ShipPosition)location.Result.Data,
-                    message = message
+                    message = (ShipMessage)message.Result.Data
                 };
                 response = shipdata;
             }
 
-            
-
-
             return response;
         }
 
+        
         [HttpPost]
         [Route("topsecret_split/{satellite_name}")]
-        public async Task<object> GetTopSecretDataSplit([FromRoute] string satellitename, [FromBody] Satellite satellite)
+        public async Task<object> TopSecretDataSplit([FromRoute] string satellite_name, [FromBody] Satellites satellite)
         {
-           
 
+            var location = GetLocation(satellite);
+            var message = GetMessage(satellite);
+            object response;
 
+            if (!location.Result.Success)
+                response = location.Result;
+            else if (!message.Result.Success)
+                response = message.Result;
+            else
+            {
+                var shipdata = new ShipData()
+                {
+                    shipPosition = (ShipPosition)location.Result.Data,
+                    message = (ShipMessage)message.Result.Data
+                };
+                response = shipdata;
+            }
 
-            return satellite;
+            return response;
         }
 
         //[HttpGet]
@@ -77,23 +90,16 @@ namespace Prueba.Tecnica.WebApi.Controllers
         //    return satellite;
         //}
 
-        private async Task<GenericResponse> GetLocation(Satellites satellites)
+        private async Task<GenericResponse> GetLocation(Satellites satellites, string satellite_name = null)
         {
             return await topSecretApplication.GetLocation(satellites);
         }
 
-        private  string GetMessage(Satellites satellites)
+        private async Task<GenericResponse> GetMessage(Satellites satellites)
         {
-            return  topSecretApplication.GetMessage(satellites);
+            return await topSecretApplication.GetMessage(satellites);
         }
 
-        //private bool ValidateRequest(Satellites satellites)
-        //{
-        //    if (!string.IsNullOrEmpty(satellites.))
-        //        return false;
-        //    if (!(satellites.distance == null))
-        //        return false;
-        //    return true;
-        //}
+
     }
 }

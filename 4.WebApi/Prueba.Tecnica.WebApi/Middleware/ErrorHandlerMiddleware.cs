@@ -31,11 +31,11 @@ namespace Prueba.Tecnica.WebApi.Middleware
                 logger.LogError($"-- Error: {ex.Message}  --- Stack Trace : {ex.StackTrace}");
                 var response = context.Response;
                 response.ContentType = "application/json";
-                response.StatusCode = 500;
+                response.StatusCode = 404;
                 ErrorResponse errorResponse = new ErrorResponse
                 {
-                    ResultCode = Constants.INTERNAL_SERVER_ERROR,
-                    ResultMsg = Constants.INTERNAL_SERVER_ERROR_DESC
+                    ResultCode = Constants.SHIP_POSITION_NOT_DETERMINED,
+                    ResultMsg = Constants.SHIP_POSITION_NOT_DETERMINED_DESC
                 };
                 GenericResponse genericResponse = Helper.ManageResponse(errorResponse, false);
                 var result = JsonSerializer.Serialize(genericResponse);

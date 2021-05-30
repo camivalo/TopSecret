@@ -8,6 +8,6 @@ namespace Prueba.Tecnica.Domain.Entities
     {
         public ShipPosition shipPosition { get; set; }
 
-        public string message { get; set; }
+        public ShipMessage message { get; set; }
     }
 }
