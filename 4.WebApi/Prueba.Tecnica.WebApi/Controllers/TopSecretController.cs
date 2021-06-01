@@ -51,31 +51,7 @@ namespace Prueba.Tecnica.WebApi.Controllers
         }
 
         
-        [HttpPost]
-        [Route("topsecret_split/{satellite_name}")]
-        public async Task<object> TopSecretDataSplit([FromRoute] string satellite_name, [FromBody] Satellites satellite)
-        {
-
-            var location = GetLocation(satellite);
-            var message = GetMessage(satellite);
-            object response;
-
-            if (!location.Result.Success)
-                response = location.Result;
-            else if (!message.Result.Success)
-                response = message.Result;
-            else
-            {
-                var shipdata = new ShipData()
-                {
-                    shipPosition = (ShipPosition)location.Result.Data,
-                    message = (ShipMessage)message.Result.Data
-                };
-                response = shipdata;
-            }
-
-            return response;
-        }
+        
 
         //[HttpGet]
         //[Route("topsecret_split/getTopSecretDataSplit")]
