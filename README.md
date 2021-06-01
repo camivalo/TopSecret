@@ -6,9 +6,9 @@ This is a .Net Core v3.1 Web Api. This API implements docker.
 
 # Architecture
 
-This project consists it's build in ONION architecture with the following layers:
+This project it's build under onion architecture this solution has these layers:
 
-##### **1. Domain**: Contains three projects:
+##### **1. Domain**:
 
 - **Entities**: Business models
 - **Interfaces**: Business contracts
