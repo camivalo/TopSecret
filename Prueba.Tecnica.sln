@@ -31,6 +31,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prueba.Tecnica.Domain.Servi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prueba.Tecnica.Infra.Utilities", "2.Infraestructure\Prueba.Tecnica.Infra.Utilities\Prueba.Tecnica.Infra.Utilities.csproj", "{8F7D4E78-E7D3-4D98-8CC6-A1B10462850F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prueba.Tecnica.Test", "5.Test\Prueba.Tecnica.Test\Prueba.Tecnica.Test.csproj", "{18333434-86B0-491A-A1FE-C53DA0496C67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Test", "5.Test", "{9440C5A7-BFE5-40DC-879B-8343946F0750}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +81,10 @@ Global
 		{8F7D4E78-E7D3-4D98-8CC6-A1B10462850F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F7D4E78-E7D3-4D98-8CC6-A1B10462850F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F7D4E78-E7D3-4D98-8CC6-A1B10462850F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18333434-86B0-491A-A1FE-C53DA0496C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18333434-86B0-491A-A1FE-C53DA0496C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18333434-86B0-491A-A1FE-C53DA0496C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18333434-86B0-491A-A1FE-C53DA0496C67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +100,7 @@ Global
 		{F1695524-9A43-4BC8-A7D6-C358E5F182CB} = {9B02DEA8-B3B4-4BCC-99F8-B22F2AA5F821}
 		{B51CBBEE-A2C6-4F2C-A39F-709295A3D6FF} = {9B02DEA8-B3B4-4BCC-99F8-B22F2AA5F821}
 		{8F7D4E78-E7D3-4D98-8CC6-A1B10462850F} = {27EB156B-52AE-42FD-A5AD-DC4343949BFC}
+		{18333434-86B0-491A-A1FE-C53DA0496C67} = {9440C5A7-BFE5-40DC-879B-8343946F0750}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {970B587A-5BF6-4778-8880-5EF4D8CE7016}
